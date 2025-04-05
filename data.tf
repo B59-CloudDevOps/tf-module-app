@@ -13,11 +13,11 @@ data "aws_ami" "main" {
 }
 
 # Once you make your own ami using the lab image with Ansible installation
-data "aws_ami" "main" {
-  most_recent = true
+# data "aws_ami" "main" {
+#   most_recent = true
 
-  owners = ["self"]
-  tags = {
-    Name = "b59-learning-ami-with-ansible"
-  }
-}
+#   owners = ["self"]
+#   tags = {
+#     Name = "b59-learning-ami-with-ansible"
+#   }
+# }
