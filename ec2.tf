@@ -17,8 +17,8 @@ resource "null_resource" "main" {
 
   connection {
     type     = "ssh"
-    user     = "ec2-user"
-    password = "DevOps321"
+    user     = var.ssh_user
+    password = var.ssh_pass
     host     = aws_instance.main.private_ip
   }
   provisioner "remote-exec" {
