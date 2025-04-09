@@ -17,8 +17,8 @@ resource "null_resource" "main" {
 
   connection {
     type     = "ssh"
-    user     = var.ssh_user
-    password = var.ssh_pass
+    user     = data.vault_generic_secret.ssh.data["ssh_user"]
+    password = data.vault_generic_secret.ssh.data["ssh_pass"]
     host     = aws_instance.main.private_ip
   }
   provisioner "remote-exec" {

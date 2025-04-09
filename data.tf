@@ -21,3 +21,7 @@ data "aws_ami" "main" {
     Name = "b59-learning-ami-with-ansible"
   }
 }
+
+data "vault_generic_secret" "ssh" {
+  path = "expense-dev/ssh_cred"
+}
