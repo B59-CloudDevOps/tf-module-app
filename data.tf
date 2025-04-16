@@ -16,7 +16,7 @@ data "aws_route53_zone" "main" {
 data "aws_ami" "main" {
   # most_recent = true    [ Don't use it and it might cause this ec2 instances to be recreated all the time ]
 
-  owners = ["self"]
+  owners = ["355449129696"]
   tags = {
     Name = "b59-learning-ami-with-ansible"
   }
