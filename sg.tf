@@ -18,6 +18,14 @@ resource "aws_security_group" "main" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
+  ingress {
+    description = "Allows Prometheus To Access NodeExporter"
+    from_port   = var.port_no_of_node_exporter
+    to_port     = var.port_no_of_node_exporter
+    protocol    = "tcp"
+    cidr_blocks = var.prometheus_server
+  }
+
   egress {
     from_port   = 0
     to_port     = 0
