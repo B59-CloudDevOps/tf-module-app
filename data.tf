@@ -14,7 +14,7 @@ data "aws_route53_zone" "main" {
 
 # Once you make your own ami using the lab image with Ansible installation
 data "aws_ami" "main" {
-  most_recent = true
+  # most_recent = true    [ Don't use it and it might cause this ec2 instances to be recreated all the time ]
 
   owners = ["self"]
   tags = {
