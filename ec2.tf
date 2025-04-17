@@ -4,7 +4,8 @@ resource "aws_instance" "main" {
   vpc_security_group_ids = [aws_security_group.main.id]
 
   tags = {
-    Name = "${var.name}-${var.env}"
+    Name       = "${var.name}-${var.env}"
+    Monitoring = "yes"
   }
   lifecycle {
     ignore_changes = [ami]
