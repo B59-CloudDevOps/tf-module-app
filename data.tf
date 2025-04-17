@@ -15,9 +15,9 @@ data "aws_route53_zone" "main" {
 # Once you make your own ami using the lab image with Ansible installation
 data "aws_ami" "main" {
   most_recent = true
+  name_regex  = "b59-learning-ami-with-ansible"
+  owners      = ["355449129696"]
 
-  owners     = ["355449129696"]
-  name_regex = "b59-learning-ami-with-ansible"
 }
 
 data "vault_generic_secret" "ssh" {
