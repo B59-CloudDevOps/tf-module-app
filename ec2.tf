@@ -7,6 +7,9 @@ resource "aws_instance" "main" {
   tags = {
     Name = "${var.name}-${var.env}"
   }
+  lifecycle {
+    ignore_changes = [ami]
+  }
 }
 
 resource "null_resource" "main" {

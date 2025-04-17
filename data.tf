@@ -17,7 +17,6 @@ data "aws_ami" "main" {
   most_recent = true
   name_regex  = "b59-learning-ami-with-ansible"
   owners      = ["355449129696"]
-
 }
 
 data "vault_generic_secret" "ssh" {
