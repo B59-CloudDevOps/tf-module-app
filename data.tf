@@ -3,15 +3,6 @@ data "aws_route53_zone" "main" {
   private_zone = false
 }
 
-# data "aws_ami" "main" {
-#   most_recent = true
-
-#   owners = ["355449129696"]
-#   tags = {
-#     Name = "DevOps-LabImage-RHEL9"
-#   }
-# }
-
 # Once you make your own ami using the lab image with Ansible installation
 data "aws_ami" "main" {
   most_recent = true
